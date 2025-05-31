@@ -3,36 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Page 3 - Pour Enola</title>
+  <title>Page 3 — Présentation</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .presentation {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      padding: 4vh 2vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2vh;
+    }
+
+    .photo-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0,0,0,0.15);
+      margin-bottom: 2vh;
+      animation: zoomIn 2s ease-in-out forwards;
+    }
+
+    .photo-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(1.1);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .presentation p {
+      opacity: 0;
+      animation: textFade 1s ease forwards;
+    }
+
+    .presentation p:nth-of-type(1) { animation-delay: 0.6s; }
+    .presentation p:nth-of-type(2) { animation-delay: 1.2s; }
+    .presentation p:nth-of-type(3) { animation-delay: 1.8s; }
+  </style>
 </head>
-<body class="page">
+<body>
+  <div class="progress-bar" id="progressBar"></div>
 
-  <div class="background-cover"></div>
+  <div class="page">
+    <h1>Moi, l’auteur</h1>
 
-  <div class="content fade-in">
-    <div class="page-number">Page 3</div>
-    <h2 class="handwritten">Il était une fois...</h2>
-    <p class="text-block">
-      ...une étoile tombée sur la Terre. Elle brillait un peu plus que les autres, pas par sa lumière, mais par la douceur qu’elle dégageait. Cette étoile, c’était toi.
-    </p>
-    <p class="text-block">
-      Ce livre est une lettre ouverte, un chemin que tu peux parcourir à ton rythme, un morceau de cœur posé sur des pages.
-    </p>
+    <div class="presentation">
+      <div class="photo-container">
+        <img src="photo.jpg" alt="Photo de l'auteur">
+      </div>
 
-    <div class="navigation">
-      <a href="page2.html" class="nav-arrow left">← Sommaire</a>
-      <a href="page4.html" class="nav-arrow right">Page suivante →</a>
+      <p>
+        Je suis la plume de ce livre, un crapaud rêveur déguisé en conteur.
+      </p>
+      <p>
+        J’ai écrit chaque mot avec la sincérité du cœur, en pensant à Enola et à l’univers unique que nous partageons.
+      </p>
+      <p>
+        Ce n’est pas un simple récit. C’est une trace, un sourire, une lumière douce que je voulais laisser dans tes mains.
+      </p>
+    </div>
+
+    <div class="nav-buttons">
+      <a href="page2.html" class="nav-link">Retour</a>
+      <a href="page5.html" class="nav-link">Page suivante</a>
     </div>
   </div>
 
-  <button class="night-mode-toggle" onclick="toggleNightMode()">🌙</button>
-
   <script>
-    function toggleNightMode() {
-      document.body.classList.toggle('night');
-    }
+    document.getElementById('progressBar').style.width = '75%';
   </script>
-
 </body>
 </html>
