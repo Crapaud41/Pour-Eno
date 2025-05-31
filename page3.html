@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Page 3 - Pour Enola</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page">
+
+  <div class="background-cover"></div>
+
+  <div class="content fade-in">
+    <div class="page-number">Page 3</div>
+    <h2 class="handwritten">Il était une fois...</h2>
+    <p class="text-block">
+      ...une étoile tombée sur la Terre. Elle brillait un peu plus que les autres, pas par sa lumière, mais par la douceur qu’elle dégageait. Cette étoile, c’était toi.
+    </p>
+    <p class="text-block">
+      Ce livre est une lettre ouverte, un chemin que tu peux parcourir à ton rythme, un morceau de cœur posé sur des pages.
+    </p>
+
+    <div class="navigation">
+      <a href="page2.html" class="nav-arrow left">← Sommaire</a>
+      <a href="page4.html" class="nav-arrow right">Page suivante →</a>
+    </div>
+  </div>
+
+  <button class="night-mode-toggle" onclick="toggleNightMode()">🌙</button>
+
+  <script>
+    function toggleNightMode() {
+      document.body.classList.toggle('night');
+    }
+  </script>
+
+</body>
+</html>
