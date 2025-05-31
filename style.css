@@ -1,1 +1,187 @@
+/* Import des polices */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@300;400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+  background: #fff;
+  color: #222;
+  transition: background 0.6s, color 0.6s;
+}
+
+body.night {
+  background: #121212;
+  color: #ddd;
+}
+
+h1.title {
+  font-size: 3em;
+  margin-bottom: 0.2em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 0.5em;
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+}
+
+.handwritten {
+  font-family: 'Great Vibes', cursive;
+}
+
+.subtitle {
+  font-size: 1.3em;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.content {
+  padding: 3em 2em;
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.centered {
+  text-align: center;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.background-cover {
+  background-image: url('couverture.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.start-button {
+  padding: 1em 2em;
+  font-size: 1em;
+  border: none;
+  background-color: #222;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.start-button:hover {
+  background-color: #444;
+}
+
+.night-mode-toggle {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  font-size: 1.2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 5;
+  color: inherit;
+}
+
+.page-number {
+  font-size: 0.9em;
+  text-align: right;
+  opacity: 0.6;
+  margin-bottom: 1em;
+}
+
+.text-block {
+  font-size: 1.2em;
+  line-height: 1.6em;
+  margin: 1.5em 0;
+  text-align: justify;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3em;
+}
+
+.nav-arrow {
+  font-size: 1em;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid currentColor;
+  padding: 0.5em 1em;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.nav-arrow:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body.night .nav-arrow:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Sommaire */
+
+.sommaire-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  gap: 4em;
+  margin-top: 2em;
+}
+
+.sommaire-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sommaire-col ul li {
+  margin: 0.5em 0;
+}
+
+.sommaire-col a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.sommaire-col a:hover {
+  color: #888;
+}
+
+.vertical-line {
+  position: absolute;
+  left: 50%;
+  top: 3.2em; /* aligné avec 'Page 3' */
+  width: 2px;
+  height: calc(100% - 4em); /* adaptatif */
+  background: rgba(0, 0, 0, 0.2);
+  transform: translateX(-50%);
+}
+
+body.night .vertical-line {
+  background: rgba(255, 255, 255, 0.2);
+}
 
