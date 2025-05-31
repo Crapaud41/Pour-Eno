@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pour Enola - Page 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page page1">
+
+  <div class="background-cover"></div>
+
+  <div class="content centered fade-in">
+    <h1 class="title handwritten">Pour Enola</h1>
+    <p class="subtitle">Un livre écrit spécialement pour toi</p>
+    <button onclick="window.location.href='page2.html'" class="start-button">Commencer la lecture</button>
+  </div>
+
+  <button class="night-mode-toggle" onclick="toggleNightMode()">🌙</button>
+
+  <script>
+    function toggleNightMode() {
+      document.body.classList.toggle('night');
+    }
+  </script>
+
+</body>
+</html>
